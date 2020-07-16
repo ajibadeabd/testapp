@@ -17,11 +17,11 @@ router.get('/health', function(req, res, next) {
   }
 
 });
-router.get('/stopServer', function(req, res, next) {
+router.get('/startServer', function(req, res, next) {
   server=true
   res.status(200).json('server is running')
 });
-router.get('/startServer', function(req, res, next) {
+router.get('/stopServer', function(req, res, next) {
   server=false
 
   res.status(500).json('server stopped')
